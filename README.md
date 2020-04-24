@@ -1,2 +1,36 @@
-# software-engineering-doodles
-University Software Engineering Assignment 
+# Software Engineering Doodles
+University Software Engineering Course Assignment - Class E
+
+## Information
+Website is hosted at [nicholasdw.com](https://nicholasdw.com/software-engineering/). Might change the URL if something comes up.
+
+<p align="center>
+  [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/lauslim12/)
+  [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+  [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
+  [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
+  [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+</p>
+
+## Team
+|            Team            |                          Role                          |
+|:--------------------------:|:------------------------------------------------------:|
+| Nicholas Dwiarto Wirasbawa | Git Engineer, Website Development, Hosting Automations |
+| Bernardus Gery Santoso     |                                                        |
+| Deka Primatio Deandra      |                                                        |
+| Lucky Benedict             |                                                        |
+
+## Content
+Nicholas's website will contain a blog-post like walkthrough on how to setup automation with CPanel and Git.
+As for the rest, simply fill this repository as you go...
+
+## Project Structure
+The project structure will follow standard HTML guidelines. Not complicated.
+
+## Installations and Usage
+* `git clone` the repository to fetch the code.
+* Run the `index.html` file in the repository.
+* Done! :smile:
+
+## Contact Person
+* See `CONTRIBUTING.md` file for contact person. :information_desk_person:
