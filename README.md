@@ -4,14 +4,6 @@ University Software Engineering Course Assignment - Class E
 ## Information
 Website is hosted at [nicholasdw.com](https://nicholasdw.com/software-engineering/). Might change the URL if something comes up.
 
-<div align="center">
-  [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/lauslim12/)
-  [![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
-  [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
-  [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
-  [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-</div>
-
 ## Team
 |            Team            |                          Role                          |
 |:--------------------------:|:------------------------------------------------------:|
