@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-  - export DEPLOYPATH = /home/nichola2/public_html/software-engineering
+  - export DEPLOYPATH = /home/nichola2/public_html/software-engineering/
   - /bin/cp index.html $DEPLOYPATH
