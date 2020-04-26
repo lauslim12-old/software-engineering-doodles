@@ -8,7 +8,7 @@ Website is hosted at [nicholasdw.com](https://nicholasdw.com/software-engineerin
 |            Team            |                          Role                          |
 |:--------------------------:|:------------------------------------------------------:|
 | Nicholas Dwiarto Wirasbawa | Git Engineer, Website Development, Hosting Automations |
-| Bernardus Gery Santoso     |                                                        |
+| Bernardus Gery Santoso     | Digital Character Art, AI                              |
 | Deka Primatio Deandra      |                                                        |
 | Lucky Benedict             |                                                        |
 
