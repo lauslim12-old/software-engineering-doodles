@@ -10,7 +10,7 @@ Website is hosted at [nicholasdw.com](https://nicholasdw.com/software-engineerin
 | Nicholas Dwiarto Wirasbawa | Git Engineer, Website Development, Hosting Automations |
 | Deka Primatio Deandra      | Mahasiswa Biasa                                        |
 | Bernardus Gery Santoso     | Digital Character Art, AI                              |
-| Lucky Benedict             |                                                        |
+| Lucky Benedict             | Beljar Dulu                                            |
 
 ## Content
 Nicholas's website will contain a blog-post like walkthrough on how to setup automation with CPanel and Git.
