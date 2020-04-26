@@ -9,7 +9,7 @@ Website is hosted at [nicholasdw.com](https://nicholasdw.com/software-engineerin
 |:--------------------------:|:------------------------------------------------------:|
 | Nicholas Dwiarto Wirasbawa | Git Engineer, Website Development, Hosting Automations |
 | Bernardus Gery Santoso     |                                                        |
-| Deka Primatio Deandra      |                                                        |
+| Deka Primatio Deandra      | Mahasiswa Biasa                                        |
 | Lucky Benedict             |                                                        |
 
 ## Content
