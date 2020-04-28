@@ -1,3 +1,138 @@
-.header {
-  margin-top: 10px;
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+:root {
+  --color-primary-dark: #E44D26;
+  --color-primary-light: #F16529;
+
+  --color-secondary-dark: #0072ff;
+  --color-secondary-light: #00c6ff;
+
+  --color-tertiary-dark: #56ab2f;
+  --color-tertiary-light: #a8e063;
+
+  --color-grey-dark-1: #808080;
+
+  --color-grey-light-1: #D3D3D3;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --font-size-small: 12px;
+
+  --shadow-dark: 0 10px 5px var(--color-grey-dark-1);
+  --shadow-color-primary: 0 3px 10px var(--color-primary-dark);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: 'Poppins', 'IBM Plex Sans', sans-serif;
+}
+
+/* Navigation Bar */
+#navigation {
+  background-color: var(--color-primary-dark);
+  padding: 1.5rem 1rem;
+  z-index: 1;
+  width: 100%;
+}
+
+#navigation li {
+  padding: 0 1rem;
+}
+
+#navigation li a {
+  color: var(--color-white);
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  color: var(--color-white);
+}
+
+.navbar-toggler-icon {
+  background: url(../img/menu.png);
+  background-size: 100%;
+}
+
+.fixedNav #navigation {
+  position: fixed;
+  top: 0;
+}
+
+.navbar-brand {
+  font-size: inherit;
+  color: var(--color-secondary-light);
+}
+
+/* Container */
+.container {
+  padding: 5rem 20rem;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 5rem;
+}
+
+/* Introduction */
+.profile-picture {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  float: left;
+}
+
+.bio-holder h5 {
+  font-size: inherit;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  display: inline-block;
+}
+
+.bio-holder p {
+  text-align: right;
+}
+
+/* Content */
+.content-banner {
+  width: 75rem;
+  height: 40rem;
+}
+
+.subtitle {
+  font-size: 2.7rem;
+  font-weight: 600;
+}
+
+.content-par {
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+/* Actually, it is much cleaner to use :not(:last-child) function but I'm just too lazy to do it. */
+.spacer {
+  margin-bottom: 5rem;
+}
+
+pre {
+  background-color: var(--color-grey-light-1);
+}
+
+.snippet {
+  font-size: 1.6rem;
 }
