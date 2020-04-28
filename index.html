@@ -33,7 +33,7 @@
 
     <div class="container">
       <header class='header'>
-        <h1 class='text-center title'>Git Notes Cheatsheet</h1>
+        <h1 class='text-center title'>Git Notes & Cheatsheet</h1>
       </header>
 
       <section class="introduction">
@@ -48,7 +48,10 @@
       </section>
 
       <section class="preface">
-        <img class="content-banner" src="img/banner.png" alt="Banner">
+        <div class="img-holder">
+          <img class="content-banner" src="img/banner.png" alt="Banner">
+        </div>
+        
         <h2 class='subtitle'>Preface</h2>
         <p class='content-par'>
           Hello everyone! This is Nicholas Dwiarto! This website is developed in order to put my personal Git commands
@@ -57,18 +60,21 @@
           secure. If I may say, GitHub is very similar to Cloud Computing CLI, like IBM Cloud, Microsoft Azure, and Amazon Web
           Services. Unlike other programming languages, Git possesses somewhat confusing syntaxes and there are many tricks to do one job.
           Like they say, there are many ways to reach Rome. Now, let's dive in into my usual Git practices!
+
+          Note that I usually use GitHub, not BitBucket, Atlassian, GitLab, etcetera.
         </p>
       </section>
 
       <div class="spacer"></div>
 
       <section class="content">
-        <h2 class="subtitle">1. Usual Way</h2>
+        <h2 class="subtitle">1. Usual Way (Quick Contribution)</h2>
         <p class="content-par">Usually, the most convinient way to use git is:</p>
 
         <pre>
           <code class='snippet'>
           cd project/directory
+          git status
           git add .
           git commit -m 'message'
           git push -u origin master
@@ -76,27 +82,272 @@
         </pre>
 
         <p class="content-par">
-          That is generally what most people with git do. However, there are probably several commands that you need to know,
-          for example what is the '-u' or '-f' symbol in the command line? And how does it help you?
+          That is generally what most people with git do as a contributor to a repository.<br>
+          <code>git status</code> is to check the condition of the working direcory. Are there any files that have not been committed yet?<br>
+          <code>git add .</code> is used to add all changed files from your working directory into the staging area.<br>
+          <code>git commit -m 'message'</code> is used to move the files from staging area into local repository.<br>
+          <code>git push -u origin master</code> is used to move the files from local repository into a remote repository.<br><br>
+          I need to remind you that using '-u' is to set up tracking branch, so in the future push/pull you do not need to specify any arguments.<br>
+          <code>-u and --set-upstream</code> are equivalent!
+
+          In case you're wondering about Git Area, here's an illustration to help you:
+
+          <div class="img-holder">
+            <img src="img/git-areas.png" alt="Git Areas" class="content-banner">
+          </div>
         </p>
       </section>
 
       <div class="spacer"></div>
 
       <section class="content">
-        <h2 class="subtitle">2. Symbolic Functions</h2>
-        <p class="content-par">Sometimes, there will probably times where you need to set upstream.</p>
+        <h2 class="subtitle">2. Usual Way (Quick Fetch)</h2>
+        <p class="content-par">Most convinient way to pull from a remote repository.</p>
 
         <pre>
           <code class="snippet">
-          git push -u origin
+          git pull origin
           </code>
         </pre>
 
-
+        <p class="content-par">
+          This is generally what I do to fetch from a remote repository.<br>
+          I rarely use <code>git fetch</code> and then <code>git merge</code>. However, <code>git fetch</code> is used
+          to fetch the data WITHOUT merging it, while <code>git merge</code> merges the fetched data with our local repository.
+        </p>
       </section>
 
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">3. Adding Remotes</h2>
+        <p class="content-par">Sometimes, we need to add an extra repository, not just the one in GitHub.</p>
+
+        <pre>
+          <code class="snippet">
+            git remote add new_remote
+            git remote -v
+            git push new_remote
+          </code>
+        </pre>
+
+        <p class="content-par">
+          I generally do this when creating a new remote. This is self explanatory.
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">4. Deletion</h2>
+        <p class="content-par">When something is messed up, we can go back.</p>
+
+        <pre>
+          <code class="snippet">
+            git reset --soft (HEAD~1)
+            or
+            git reset --mixed (HEAD~1)
+            or
+            git reset --hard (HEAD~1)
+          </code>
+        </pre>
+
+        <p class="content-par">
+          <code>git reset --soft HEAD~1</code> is used to uncommit changes, however all added files remain in the staging area.<br>
+          <code>git reset --mixed HEAD~1</code> is used to uncommit changes, and unstage added files. This is the default.<br>
+          <code>git reset --hard HEAD~1</code> is used to uncommit changes and deletes all local changes.<br>
+          It is possible to do so without the <code>HEAD~n</code> pointer, as the '~' symbol marks 'to go back n number of commits'.<br>
+          Before I forget, <code>HEAD^n</code> pointer refers to immediate parents.<br>
+          The rule of thumb is to use '~' for most of the time, and '^' on merge commits.
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">5. Rebasing</h2>
+        <p class="content-par">Dirty commit history can be fixed using this.</p>
+
+        <pre>
+          <code class="snippet">
+            git log --oneline (or git log)
+            git rebase -i HEAD~n (where n is the number of commits needed, or if too much hassle just use:)
+            git rebase master
+          </code>
+        </pre>
+
+        <p class="content-par">
+          If you're using the '-i' tag, then your favorite text editor should come up and provide you with a set of instructions.<br>
+          Simply remove the the commit that you do not want, and replace it with your desired instructions, available in your text editor.<br>
+          When you're done, close the file, commit, and do <code>git push --force-with-lease origin branch_name</code>.<br>
+          It's not a good practice to use <code>--force</code>.
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">6. Branching</h2>
+        <p class="content-par">You can make your own branch!</p>
+
+        <pre>
+          <code class="snippet">
+            git branch branch_name
+            git branch or git branch --list
+            git push origin branch_name
+          </code>
+        </pre>
+
+        <p class="content-par">
+          Creates a new branch in your local repository.<br>
+          When you push it to your remote repository, don't forget to pass the branch name as an argument.
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">7. Checking Out</h2>
+        <p class="content-par">How to switch from one branch into the other branch?</p>
+      
+        <pre>
+          <code class="snippet">
+            git checkout branch_name
+          </code>
+        </pre>
+
+        <p class="content-par">
+          Pretty self explanatory, right? You can also use <code>git checkout -b branch_name</code> to make a new branch and instantly switch to it.
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">8. Unstaging</h2>
+        <p class="content-par">If you accidentally added the wrong file into the staging area.</p>
+
+        <pre>
+          <code class="snippet">
+            git rm --cached file_name
+            git push origin
+          </code>
+        </pre>
+
+        <p class="content-par">
+          An alternative in number 4's deletion. The <code>--cached</code> flag is to keep the file, but removes it from the staging area.<br>
+          Or, like in number 4, just use <code>git reset option_setting</code> and you're done. Remember, <code>option_setting</code> is --soft, --hard, etcetera.<br>
+          You can use this to delete files from a commit too. Just delete it with <code>git rm</code>, then use <code>git push origin</code>
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">9. Deleting a Branch</h2>
+        <p class="content-par">Branch's messed up? Don't worry.</p>
+
+        <pre>
+          <code class="snippet">
+            git branch --delete branch_name
+            git push origin --delete branch_name
+          </code>
+        </pre>
+
+        <p class="content-par">
+          Pretty self explanatory, isn't it? Just delete the branch in your local machine, then also in remote repository.
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">10. Stashing</h2>
+        <p class="content-par">If you want to store your current changes, then proceed to make different changes.</p>
+
+        <pre>
+          <code class="snippet">
+            git stash
+            git stash list
+            git stash apply or git stash apply stash@{n}
+          </code>
+        </pre>
+
+        <p class="content-par">
+          Stashes your changes into a temporary area, then you can fetch them with <code>git stash apply</code>. Remember that the stash
+          is made from a stack-like data structure, so when you use <code>git stash apply</code>, Git will assume you mean the latest stash.<br>
+          Of course, you can change the settings with <code>git stash apply stash@{n}</code>, where n is the order of the stash from <code>git stash list</code>.
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">Special: Deployment with CPanel</h2>
+        <p class="content-par">Automate your tasks!</p>
+
+        <pre>
+          <code class="snippet">
+            # Cron Job
+            cd ~/path-to-repo-from-home/ && git pull origin && /usr/bin/uapi VersionControlDeployment create repository_root=path-to-repo
+            or (if permissions not given)
+            */1 * * * * su -s /bin/sh nobody -c 'cd ~dstrt/www && /usr/local/bin/git pull -q origin master'
+
+            # Setting up Remote
+            git remote add server ssh_link_to_server
+            git push server
+          </code>
+        </pre>
+
+        <p class="content-par">
+          First off, we have to make a Cron Job in the CPanel interface. You can set the automated time of your liking.<br>
+          Then, fill the terminal with the commands above. Don't forget to change the paths!<br>
+          Make sure that you have created a new repository in the CPanel! It should be available by default<br>
+          Set the tracking branch to origin/master, and remote origin in your GitHub/BitBucket repository.<br>
+          <code>/usr/bin/uapi VersionControlDeployment create repository=</code> is a command to call CPanel auto deployment API.
+          In order to push to two remotes at once, you can use:
+
+          <pre>
+            <code class="snippet">
+              git push origin
+              git push server
+            </code>
+          </pre>
+
+          <p class="content-par">Usually, the terminal will ask for a password, as the connection is SSH.</p>
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">Thank You!</h2>
+        <p class="content-par">
+          Thank you for reading my cheatsheet! I hope it will be useful to you in so many cases.
+          If you have any inquiries or want to contact me, feel free to do so at: nicholasdwiarto@yahoo.com.<br>
+          Also, please check out my website by <a href="https://nicholasdw.com/">clicking here!</a>
+        </p>
+
+        <div class="spacer"></div>
+
+        <div class="signature">
+          <p>
+            Best regards,<br>
+            Nicholas Dwiarto.            
+          </p>
+
+          <img src="img/badge.png" alt="Badge">
+          <p class='sig-p'>
+            Git Enthusiast (LinkedIn Badge Awardee)
+          </p>
+        </div>
+
+      </section>
     </div>
+
+    <footer class="py-4 bg-dark text-white">
+      <small>Copyright 2020 &copy; Nicholas Dwiarto W. Website: https://nicholasdw.com</small>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
