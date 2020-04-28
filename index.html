@@ -4,10 +4,12 @@
     <title>Software Engineering Doodles</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png">
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Doodles</a>
+    <nav id="navigation" class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html">Doodles</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,16 +32,76 @@
     </nav>
 
     <div class="container">
-      <div class="header">
-        <h1 class='text-center'>Git Notes - Nicholas Dwiarto</h1>
-      </div>
-      
-    </div>
+      <header class='header'>
+        <h1 class='text-center title'>Git Notes Cheatsheet</h1>
+      </header>
 
+      <section class="introduction">
+        <div class="holder">
+          <img class='profile-picture' src="img/nicholas.png" alt="Picture not found">
+
+          <div class="bio-holder">
+            <h5>Nicholas Dwiarto</h5>
+            <p>April 28, 2020.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="preface">
+        <img class="content-banner" src="img/banner.png" alt="Banner">
+        <h2 class='subtitle'>Preface</h2>
+        <p class='content-par'>
+          Hello everyone! This is Nicholas Dwiarto! This website is developed in order to put my personal Git commands
+          cheatsheet open source for everyone. Unlike other tools like ordinary programming languages, Git requires us
+          to understand its concepts clearly and it possesses incredible power in order to keep your code neat, tidy, and
+          secure. If I may say, GitHub is very similar to Cloud Computing CLI, like IBM Cloud, Microsoft Azure, and Amazon Web
+          Services. Unlike other programming languages, Git possesses somewhat confusing syntaxes and there are many tricks to do one job.
+          Like they say, there are many ways to reach Rome. Now, let's dive in into my usual Git practices!
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">1. Usual Way</h2>
+        <p class="content-par">Usually, the most convinient way to use git is:</p>
+
+        <pre>
+          <code class='snippet'>
+          cd project/directory
+          git add .
+          git commit -m 'message'
+          git push -u origin master
+          </code>
+        </pre>
+
+        <p class="content-par">
+          That is generally what most people with git do. However, there are probably several commands that you need to know,
+          for example what is the '-u' or '-f' symbol in the command line? And how does it help you?
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">2. Symbolic Functions</h2>
+        <p class="content-par">Sometimes, there will probably times where you need to set upstream.</p>
+
+        <pre>
+          <code class="snippet">
+          git push -u origin
+          </code>
+        </pre>
+
+
+      </section>
+
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
+
 </html>
 
