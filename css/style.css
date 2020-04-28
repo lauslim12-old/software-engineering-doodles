@@ -81,7 +81,7 @@ body {
 
 /* Container */
 .container {
-  padding: 5rem 20rem;
+  padding: 1rem;
 }
 
 .title {
@@ -109,9 +109,14 @@ body {
 }
 
 /* Content */
+.img-holder {
+  text-align: center;
+}
+
 .content-banner {
   width: 75rem;
   height: 40rem;
+  margin: 0 auto;
 }
 
 .subtitle {
@@ -121,7 +126,6 @@ body {
 
 .content-par {
   font-size: 1.6rem;
-  text-align: justify;
 }
 
 /* Actually, it is much cleaner to use :not(:last-child) function but I'm just too lazy to do it. */
@@ -135,4 +139,26 @@ pre {
 
 .snippet {
   font-size: 1.6rem;
+}
+
+.signature {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.signature img {
+  width: 25rem;
+  height: 7.5rem;
+}
+
+.sig-p {
+  margin-top: 1rem;
+}
+
+footer {
+  flex-shrink: none;
+  width: 100%;
+  text-align: center;
 }
