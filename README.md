@@ -14,7 +14,14 @@ Website is hosted at [nicholasdw.com](https://nicholasdw.com/software-engineerin
 
 ## Content
 Nicholas's website will contain a blog-post like walkthrough on how to setup automation with CPanel and Git.
+Gery's website contains cards about himself.
 As for the rest, simply fill this repository as you go...
+
+## TODO
+Nicholas:
+* Add a section: resolving common problems?
+* Add more Git commands.
+* Make the web to be reseponsive!
 
 ## Project Structure
 The project structure will follow standard HTML guidelines. Not complicated.
