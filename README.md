@@ -2,7 +2,7 @@
 University Software Engineering Course Assignment - Class E
 
 ## Information
-Website is hosted at [nicholasdw.com](https://nicholasdw.com/software-engineering/). Might change the URL if something comes up.
+Website is hosted live at [nicholasdw.com/software-engineering/](https://nicholasdw.com/software-engineering/). Might change the URL if something comes up.
 
 ## Team
 |            Team            |                          Role                          |
@@ -10,12 +10,12 @@ Website is hosted at [nicholasdw.com](https://nicholasdw.com/software-engineerin
 | Nicholas Dwiarto Wirasbawa | Git Engineer, Website Development, Hosting Automations |
 | Deka Primatio Deandra      | Mahasiswa Biasa                                        |
 | Bernardus Gery Santoso     | Digital Character Art, AI                              |
-| Lucky Benedict             | Belajar Dulu                                            |
+| Lucky Benedict             | Belajar Dulu                                           |
 
 ## Content
 Nicholas's website will contain a blog-post like walkthrough on how to setup automation with CPanel and Git.
 Gery's website contains cards about himself.
-As for the rest, simply fill this repository as you go...
+As with Deka and Lucky.
 
 ## TODO
 Nicholas:
