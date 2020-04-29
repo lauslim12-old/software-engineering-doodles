@@ -63,9 +63,45 @@
           to understand its concepts clearly and it possesses incredible power in order to keep your code neat, tidy, and
           secure. If I may say, GitHub is very similar to Cloud Computing CLI, like IBM Cloud, Microsoft Azure, and Amazon Web
           Services. Unlike other programming languages, Git possesses somewhat confusing syntaxes and there are many tricks to do one job.
-          Like they say, there are many ways to reach Rome. Now, let's dive in into my usual Git practices!
+          Like they say, there are many ways to reach Rome. Now, let's dive in into my usual Git practices!<br><br>
 
-          Note that I usually use GitHub, not BitBucket, Atlassian, GitLab, etcetera.
+          Note that I usually use GitHub, not BitBucket, Atlassian, GitLab, etcetera. I'm using Windows 10, and the git version I'm using is 2.26.2.windows.1.<br>
+          You can check your git version by using <code>git --version</code>. Don't forget to install it to your computer in this <a href="https://git-scm.com/downloads">link.</a>
+          I will assume that you are new to Git and Command Lines, so I will teach you along the way! No worries!
+        </p>
+      </section>
+
+      <div class="spacer"></div>
+
+      <section class="content">
+        <h2 class="subtitle">0. Initial Setup</h2>
+        <p class="content-par">Let us start! You can start by creating a new repository on <a href="https://github.com/">GitHub</a>. After making it, copy the git link (https://www.your-own-link.git), and then do this in your local machine (open your Command Prompt):</p>
+        
+        <pre>
+          <code class="snippet">
+            git config --global user.name "your-github-username"
+            git config --global user.email "your-github-email"
+
+            cd project-dir
+            mkdir my-project
+            cd my-project
+            git init
+            echo Hello > git-test.txt
+            git add . or git add git-test.txt
+            git commit -m "My first commit!"
+            git remote add origin 'your-own-link.git'
+            git push -u origin master
+          </code>
+        </pre>
+
+        <p class="content-par">
+          First is to set your own Git account. Then, make sure to make your own repository.<br>
+          Then, do the following configurations on your Command Line.<br>
+          <code>cd project-dir</code> is used to switch current working directory on Command Prompt.<br>
+          <code>mkdir my-project</code> is used to make a new folder, in Command Prompt way.<br>
+          <code>git init</code> is to initialize an empty git <b>local</b> repository.<br>
+          <code>echo Hello > git-test.txt</code> is to make a file named git-test.txt, and its content will be 'Hello'
+          The rest will be explained in the next section!
         </p>
       </section>
 
@@ -81,7 +117,7 @@
           git status
           git add .
           git commit -m 'message'
-          git push -u origin master
+          git push -u origin master or git push origin master or git push origin
           </code>
         </pre>
 
@@ -92,7 +128,7 @@
           <code>git commit -m 'message'</code> is used to move the files from staging area into local repository.<br>
           <code>git push -u origin master</code> is used to move the files from local repository into a remote repository.<br><br>
           I need to remind you that using '-u' is to set up tracking branch, so in the future push/pull you do not need to specify any arguments.<br>
-          <code>-u and --set-upstream</code> are equivalent!
+          Before I forget, <code>-u and --set-upstream</code> are equivalent!
 
           In case you're wondering about Git Area, here's an illustration to help you:
 
