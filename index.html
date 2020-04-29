@@ -49,7 +49,11 @@
 
       <section class="preface">
         <div class="img-holder">
-          <img class="content-banner" src="img/banner.png" alt="Banner">
+          <figure class="figure">
+            <img class="content-banner" src="img/banner.png" alt="Banner">
+            <figcaption class="figure-caption">Welcome to my Git and GitHub guide!</figcaption>
+            <figcaption class="figure-caption">Source: https://miro.medium.com/max/1400/1*mtsk3fQ_BRemFidhkel3dA.png</figcaption>
+          </figure>
         </div>
         
         <h2 class='subtitle'>Preface</h2>
@@ -93,7 +97,11 @@
           In case you're wondering about Git Area, here's an illustration to help you:
 
           <div class="img-holder">
-            <img src="img/git-areas.png" alt="Git Areas" class="content-banner">
+            <figure class="figure">
+              <img src="img/git-areas.png" alt="Git Areas" class="content-banner">
+              <figcaption class="figure-caption">Three core local git areas. Working directory, staging area (git add), and local repository.</figcaption>
+              <figcaption class="figure-caption">Source: https://git-scm.com/book/en/v2/images/areas.png</figcaption>
+            </figure>
           </div>
         </p>
       </section>
@@ -107,11 +115,13 @@
         <pre>
           <code class="snippet">
           git pull origin
+          then
+          git push origin
           </code>
         </pre>
 
         <p class="content-par">
-          This is generally what I do to fetch from a remote repository.<br>
+          This is generally what I do to fetch from a remote repository. <b>Make sure to always pull before pushing if you're working with team!</b><br>
           I rarely use <code>git fetch</code> and then <code>git merge</code>. However, <code>git fetch</code> is used
           to fetch the data WITHOUT merging it, while <code>git merge</code> merges the fetched data with our local repository.
         </p>
@@ -177,6 +187,7 @@
         </pre>
 
         <p class="content-par">
+          The <code>git log --oneline</code> command is to show your commit history and its SHA-hashed code.<br>
           If you're using the '-i' tag, then your favorite text editor should come up and provide you with a set of instructions.<br>
           Simply remove the the commit that you do not want, and replace it with your desired instructions, available in your text editor.<br>
           When you're done, close the file, commit, and do <code>git push --force-with-lease origin branch_name</code>.<br>
@@ -317,6 +328,15 @@
           <p class="content-par">Usually, the terminal will ask for a password, as the connection is SSH.</p>
         </p>
       </section>
+
+      <div class="spacer"></div>
+
+      <div class="content">
+        <h2 class="subtitle">References</h2>
+        <p class="content-par">
+          Git. (2020). Git - Reference. Retrieved from: <a href="https://git-scm.com/docs">https://git-scm.com/docs.</a> Accessed on April 28, 2020, on 21:00.
+        </p>
+      </div>
 
       <div class="spacer"></div>
 
