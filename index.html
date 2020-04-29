@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>Software Engineering Doodles</title>
+    <title>Version Control System &mdash; Software Engineering Doodles</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Git Cheatsheet">
@@ -82,7 +82,9 @@
 
       <section class="content">
         <h2 class="subtitle">0. Initial Setup</h2>
-        <p class="content-par">Let us start! You can start by creating a new repository on <a href="https://github.com/">GitHub</a>. After making it, copy the git link (https://www.your-own-link.git), and then do this in your local machine (open your Command Prompt):</p>
+        <p class="content-par">Let us start! You can start by creating a new repository on <a href="https://github.com/">GitHub</a>. 
+          There will be some settings that you need to configure. It's not too much to think about, only repository name, privilege, etcetera.
+          After making it, copy the git link (https://www.your-own-link.git), and then do this in your local machine (open your Command Prompt):</p>
         
         <pre>
           <code class="snippet">
@@ -360,7 +362,7 @@
         <p class="content-par">
           First off, we have to make a Cron Job in the CPanel interface. You can set the automated time of your liking.<br>
           Then, fill the terminal with the commands above. Don't forget to change the paths!<br>
-          Make sure that you have created a new repository in the CPanel! It should be available by default<br>
+          Make sure that you have created a new repository in the CPanel! It should be available by default.<br>
           Set the tracking branch to origin/master, and remote origin in your GitHub/BitBucket repository.<br>
           <code>/usr/bin/uapi VersionControlDeployment create repository=</code> is a command to call CPanel auto deployment API.
           In order to push to two remotes at once, you can use:
