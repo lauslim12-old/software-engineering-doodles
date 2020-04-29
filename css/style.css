@@ -135,6 +135,7 @@ body {
 
 pre {
   background-color: var(--color-grey-light-1);
+  padding-right: 5rem;
 }
 
 .snippet {
