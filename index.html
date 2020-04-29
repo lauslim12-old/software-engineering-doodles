@@ -3,7 +3,7 @@
   <head>
     <title>Software Engineering Doodles</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?version=1.0">
     <link rel="shortcut icon" href="img/favicon.png">
   </head>
 
@@ -150,14 +150,18 @@
 
         <pre>
           <code class="snippet">
+          # If you are first time using the repository, then use:
+          git clone git_cloned_project
+          
+          # If you already have the repository in your local machine:
           git pull origin
-          then
-          git push origin
+          git push origin (to push)
           </code>
         </pre>
 
         <p class="content-par">
-          This is generally what I do to fetch from a remote repository. <b>Make sure to always pull before pushing if you're working with team!</b><br>
+          If you have not yet copied the repository to your local machine, make sure to use <code>git clone git_cloned_project</code>.<br>
+          This is generally what I do to fetch from a remote repository. <b>Make sure to always pull before pushing if you're working with team!</br><br>
           I rarely use <code>git fetch</code> and then <code>git merge</code>. However, <code>git fetch</code> is used
           to fetch the data WITHOUT merging it, while <code>git merge</code> merges the fetched data with our local repository.
         </p>
