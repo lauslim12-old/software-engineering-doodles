@@ -1,7 +1,14 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Software Engineering Doodles</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Git Cheatsheet">
+    <meta name="author" content="Nicholas Dwiarto">
+    <meta name="keywords" content="Git, GitHub, VCS, Version Control System">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css?version=1.0">
     <link rel="shortcut icon" href="img/favicon.png">
@@ -50,7 +57,7 @@
       <section class="preface">
         <div class="img-holder">
           <figure class="figure">
-            <img class="content-banner" src="img/banner.png" alt="Banner">
+            <img class="content-banner img-fluid" src="img/banner.png" alt="Banner">
             <figcaption class="figure-caption">Welcome to my Git and GitHub guide!</figcaption>
             <figcaption class="figure-caption">Source: https://miro.medium.com/max/1400/1*mtsk3fQ_BRemFidhkel3dA.png</figcaption>
           </figure>
@@ -134,7 +141,7 @@
 
           <div class="img-holder">
             <figure class="figure">
-              <img src="img/git-areas.png" alt="Git Areas" class="content-banner">
+              <img src="img/git-areas.png" alt="Git Areas" class="content-banner img-fluid">
               <figcaption class="figure-caption">Three core local git areas. Working directory, staging area (git add), and local repository.</figcaption>
               <figcaption class="figure-caption">Source: https://git-scm.com/book/en/v2/images/areas.png</figcaption>
             </figure>
@@ -161,7 +168,7 @@
 
         <p class="content-par">
           If you have not yet copied the repository to your local machine, make sure to use <code>git clone git_cloned_project</code>.<br>
-          This is generally what I do to fetch from a remote repository. <b>Make sure to always pull before pushing if you're working with team!</br><br>
+          This is generally what I do to fetch from a remote repository. <b>Make sure to always pull before pushing if you're working with team!</b><br>
           I rarely use <code>git fetch</code> and then <code>git merge</code>. However, <code>git fetch</code> is used
           to fetch the data WITHOUT merging it, while <code>git merge</code> merges the fetched data with our local repository.
         </p>
