@@ -138,8 +138,17 @@ pre {
   padding-right: 5rem;
 }
 
+code {
+  color: #004e92;
+  font-size: inherit;
+  background-color: #CFDEF3;
+  font-weight: 600;
+}
+
 .snippet {
   font-size: 1.6rem;
+  background-color: var(--color-grey-light-1);
+  font-weight: 400;
 }
 
 .signature {
